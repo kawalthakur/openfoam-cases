@@ -1,5 +1,6 @@
 ./*/dynamicCode/*
 ./*/[0-9]*
+./*/constant/polyMesh/*
 !./*/0
 ./*/vscode/*
 ./vscode/*
