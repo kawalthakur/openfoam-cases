@@ -28,7 +28,8 @@ boundaryField
 
     fixedWalls
     {
-        type            zeroGradient;
+        type            fixedValue;
+	value           uniform 300;
     }
 
     frontAndBack
