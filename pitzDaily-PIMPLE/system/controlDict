@@ -48,4 +48,39 @@ adjustTimeStep  yes;
 
 maxCo           5;
 
+functions
+{
+    p_total
+    {
+        type            coded;
+        libs            (utilityFunctionObjects);
+        // Name of the IOobject to be created as Total Pressure 
+        name            p_total;
+        executeControl  timeStep;
+        executeInterval 100;
+        writeControl    timeStep;
+        writeInterval   100;
+        codeWrite
+        #{
+            const volVectorField& U = mesh().lookupObject<volVectorField>("U");
+            const volScalarField& p = mesh().lookupObject<volScalarField>("p");    
+            volScalarField p_total
+            (
+                IOobject
+                (
+                    "p_total",
+                    mesh().time().timeName(),
+                    mesh(),
+                    IOobject::MUST_READ,
+                    IOobject::AUTO_WRITE
+                ),
+                p + 0.5*magSqr(U)
+            );
+            p_total().write();
+        #};
+
+    }
+
+}
+
 // ************************************************************************* //
