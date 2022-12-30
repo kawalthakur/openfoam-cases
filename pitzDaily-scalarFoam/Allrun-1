@@ -26,7 +26,7 @@ do
     for J in {1..5}
     do
         # copying the data file from each timestep folder to data folder
-        NAME="time-${J}-dt-${SCHEMES[$((COUNTER+1))]}.xy"
+        NAME="time-${J}-${SCHEMES[$((COUNTER+1))]}.xy"
         cp ./postProcessing/singleGraph/${J}/line_T.xy $FOAM_RUN/openfoam-cases/pitzDaily-scalarFoam/data-padv/${NAME}
     done
     rm -r {1..5}

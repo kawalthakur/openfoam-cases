@@ -1,0 +1,14 @@
+#!/usr/bin/gnuplot
+set terminal png size 1280, 800 font "Bahnschrift,22"
+set title "Variation of Temperature along the length for DT = 0"
+set xlabel "Length (m)"
+set ylabel "T (K)"
+set yrange [-0.1:1.1]
+set xrange [0:12]
+set grid xtics ytics
+
+set title "Variation of Temperature along the length for linearUpwind"
+set output "linearUpwind.png"
+plot "time-3-linearUpwind.xy" lw 3  with lines title "t = 3 sec",\
+    "time-1-linearUpwind.xy" lw 3 with lines title "t = 1 sec",\
+    "time-0-any.xy" lw 3 with lines title "t = 0 sec"
