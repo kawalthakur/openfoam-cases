@@ -14,7 +14,7 @@ Description
 start   (-5 0 1);
 end     (5 0 1);
 fields  (T);
-
+nPoints 500;
 // Sampling and I/O settings
 #includeEtc "caseDicts/postProcessing/graphs/sampleDict.cfg"
 

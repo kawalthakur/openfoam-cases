@@ -9,25 +9,30 @@ set grid xtics ytics
 
 set title "Variation of Temperature along the length for DT = 0"
 set output "0.png"
-plot "time-2-dt-0.xy" lw 2.5 with lines title "t = 2 sec",\
-    "time-5-dt-0.xy" lw 2.5 with lines title "t = 5 sec",\
-    "time-0-dt-0.xy" lw 2.5 with lines title "t = 0 sec"
+plot "time-3-dt-0.xy" lw 3.5 with lines title "t = 3 sec",\
+    "time-5-dt-0.xy" lw 3.5 with lines title "t = 5 sec",\
+    "time-0-dt-0.xy" lw 3.5 with lines title "t = 0 sec"
 
 set title "Variation of Temperature along the length for DT = 0.0001"
 set output "0.0001.png"
-plot "time-2-dt-0.0001.xy" lw 2.5 with lines title "t = 2 sec",\
-    "time-5-dt-0.0001.xy" lw 2.5 with lines title "t = 5 sec",\
-    "time-0-dt-0.xy" lw 2.5 with lines title "t = 0 sec"
+plot "time-3-dt-0.0001.xy" lw 3.5 with lines title "t = 3 sec",\
+    "time-5-dt-0.0001.xy" lw 3.5 with lines title "t = 5 sec",\
+    "time-0-dt-0.xy" lw 3.5 with lines title "t = 0 sec"
 
 set title "Variation of Temperature along the length for DT = 0.01"
 set output "0.01.png"
-plot "time-2-dt-0.01.xy" lw 2.5 with lines title "t = 2 sec",\
-    "time-5-dt-0.01.xy" lw 2.5 with lines title "t = 5 sec",\
-    "time-0-dt-0.xy" lw 2.5 with lines title "t = 0 sec"
+plot "time-3-dt-0.01.xy" lw 3.5 with lines title "t = 3 sec",\
+    "time-5-dt-0.01.xy" lw 3.5 with lines title "t = 5 sec",\
+    "time-0-dt-0.xy" lw 3.5 with lines title "t = 0 sec"
 
 set title "Variation of Temperature along the length for DT = 1"
 set xrange [0:10]
 set output "1.png"
-plot "time-2-dt-1.xy" lw 2.5 with lines title "t = 2 sec",\
-    "time-5-dt-1.xy" lw 2.5 with lines title "t = 5 sec",\
-    "time-0-dt-0.xy" lw 2.5 with lines title "t = 0 sec"
+plot "time-3-dt-1.xy" lw 3.5 with lines title "t = 3 sec",\
+    "time-5-dt-1.xy" lw 3.5 with lines title "t = 5 sec",\
+    "time-0-dt-0.xy" lw 3.5 with lines title "t = 0 sec"
+
+system("mv 0.png ~/Documents/latex-docs/project-4/0.png")
+system("mv 0.0001.png ~/Documents/latex-docs/project-4/0.0001.png")
+system("mv 0.01.png ~/Documents/latex-docs/project-4/0.01.png")
+system("mv 1.png ~/Documents/latex-docs/project-4/1.png")
