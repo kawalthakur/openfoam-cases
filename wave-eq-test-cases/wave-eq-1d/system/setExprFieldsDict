@@ -1,0 +1,24 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      setFieldsDict;
+}
+
+expressions
+(
+    T
+    {
+        field T;
+        dimensions [0 0 0 1 0 0 0];
+        
+        expression
+        #{
+            // pos().x()
+            300*sin(6 * 3.141593 * pos().x())
+
+        #};
+    }
+
+);

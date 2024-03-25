@@ -1,0 +1,39 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      setExprFieldsDict;
+}
+
+expressions
+(
+    T
+    {
+        field T;
+        
+        dimensions [0 0 0 1 0 0 0];
+        
+        // constants
+        // {
+        //     centre (2.5 1.2 0);
+        // }
+
+        variables
+        (
+            "radius = 0.7"
+            "centre = vector(2.5,1.2,0)"
+        );
+
+        fieldMask
+        #{
+            (mag(pos() - centre) < radius)
+        #};
+
+        expression
+        #{
+            
+            300 * mag(pos() - centre)
+        #};
+    }
+);

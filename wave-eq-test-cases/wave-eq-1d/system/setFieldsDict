@@ -1,0 +1,17 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      setFieldsDict;
+}
+
+expressions
+{
+    set1
+    {
+        field T;
+        keepPatches true;
+        expression "sin(6*3.141593*pos().x)";
+    }
+};
